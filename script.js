@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Scroll reveal animations ---
     const revealElements = document.querySelectorAll(
-        '.feature-card, .step, .showcase-card, .pricing-card'
+        '.feature-card, .step, .showcase-card'
     );
 
     const observer = new IntersectionObserver((entries) => {
@@ -82,26 +82,54 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Waitlist form ---
+    const WAITLIST_API = 'https://yassbuy-api.vercel.app/api/waitlist';
     const form = document.getElementById('waitlistForm');
     const emailInput = document.getElementById('emailInput');
     const formSuccess = document.getElementById('formSuccess');
+    const formBtn = form.querySelector('.form-btn');
 
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
         e.preventDefault();
         const email = emailInput.value.trim();
 
-        if (email && email.includes('@')) {
-            // In production, you'd send this to your backend/email service
-            emailInput.value = '';
-            emailInput.disabled = true;
-            form.querySelector('.form-btn').style.display = 'none';
-            formSuccess.classList.add('show');
+        if (!email || !email.includes('@')) return;
 
+        // Disable while submitting
+        emailInput.disabled = true;
+        formBtn.disabled = true;
+        formBtn.textContent = 'Joining...';
+
+        try {
+            const res = await fetch(WAITLIST_API, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email }),
+            });
+
+            const data = await res.json();
+
+            emailInput.value = '';
+            formBtn.style.display = 'none';
+
+            if (data.duplicate) {
+                formSuccess.textContent = "You're already on the list! We'll be in touch.";
+            } else {
+                formSuccess.textContent = "You're on the list! Check your email for confirmation.";
+            }
+            formSuccess.classList.add('show');
+        } catch (err) {
+            formSuccess.textContent = 'Something went wrong. Please try again.';
+            formSuccess.style.color = '#F87171';
+            formSuccess.classList.add('show');
+        } finally {
             // Re-enable after 5 seconds
             setTimeout(() => {
                 emailInput.disabled = false;
-                form.querySelector('.form-btn').style.display = '';
+                formBtn.disabled = false;
+                formBtn.innerHTML = 'Join Waitlist <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+                formBtn.style.display = '';
                 formSuccess.classList.remove('show');
+                formSuccess.style.color = '';
             }, 5000);
         }
     });
