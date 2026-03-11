@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YASSbuy — AI-Powered Smart Purchasing</title>
+    <meta name="description" content="YASSbuy uses AI to help you budget, compare, avoid buyer's remorse, and find discounts on big purchases. Shop smarter, not harder.">
+    <meta name="keywords" content="AI shopping, smart purchasing, budget planner, price comparison, buyer's remorse, discount finder">
+    <meta property="og:title" content="YASSbuy — AI-Powered Smart Purchasing">
+    <meta property="og:description" content="Shop smarter with AI. Budget, compare, and save on every big purchase.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yassbuy.com">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="assets/logo.svg" alt="YASSbuy" height="40">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#waitlist" class="btn btn-sm btn-primary">Join Waitlist</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                AI-Powered Shopping Intelligence
+            </div>
+            <h1 class="hero-title">
+                Big Purchases.<br>
+                <span class="gradient-text">Zero Regrets.</span>
+            </h1>
+            <p class="hero-subtitle">
+                Eyeing a $500+ snowboard, road bike, or new laptop? YASSbuy uses AI to analyze your budget, compare alternatives, predict buyer's remorse, and find you the best deal — before you click buy.
+            </p>
+            <div class="hero-cta">
+                <a href="#waitlist" class="btn btn-lg btn-primary">
+                    Get Early Access
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="#how-it-works" class="btn btn-lg btn-ghost">
+                    See How It Works
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value" data-count="2847">0</span>
+                    <span class="stat-label">Waitlist signups</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">$340</span>
+                    <span class="stat-label">Avg. saved per purchase</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">94%</span>
+                    <span class="stat-label">Purchase satisfaction</span>
+                </div>
+            </div>
+        </div>
+        <!-- Floating product cards -->
+        <div class="hero-visuals">
+            <div class="floating-card card-1">
+                <div class="card-icon card-icon-green">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                    <div class="card-title">Budget Check</div>
+                    <div class="card-text text-green">You can afford this!</div>
+                </div>
+            </div>
+            <div class="floating-card card-2">
+                <div class="card-icon card-icon-purple">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M13 10V3L4 14H11V21L20 10H13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                    <div class="card-title">AI Insight</div>
+                    <div class="card-text text-purple">3 better alternatives found</div>
+                </div>
+            </div>
+            <div class="floating-card card-3">
+                <div class="card-icon card-icon-pink">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                    <div class="card-title">Remorse Score</div>
+                    <div class="card-text text-pink">Low — 92% keep this item</div>
+                </div>
+            </div>
+            <div class="floating-card card-4">
+                <div class="card-icon card-icon-cyan">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M7 7H7.01M7 3H12L21 12L12 21L3 12V7C3 5.93913 3.42143 4.92172 4.17157 4.17157C4.92172 3.42143 5.93913 3 7 3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div>
+                    <div class="card-title">Discount Found</div>
+                    <div class="card-text text-cyan">Save $127 with code</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logos / Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <p class="social-proof-text">Backed by AI that analyzes data from</p>
+            <div class="logo-strip">
+                <div class="proof-item">Amazon</div>
+                <div class="proof-item">Best Buy</div>
+                <div class="proof-item">REI</div>
+                <div class="proof-item">Walmart</div>
+                <div class="proof-item">Target</div>
+                <div class="proof-item">eBay</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Features</div>
+                <h2 class="section-title">Your AI Purchase<br><span class="gradient-text">Co-Pilot</span></h2>
+                <p class="section-subtitle">Four powerful AI tools that work together to make every big purchase a confident one.</p>
+            </div>
+            <div class="features-grid">
+                <!-- Feature 1: Budget Analysis -->
+                <div class="feature-card" data-feature="budget">
+                    <div class="feature-icon feature-icon-violet">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M2 3H8C9.06087 3 10.0783 3.42143 10.8284 4.17157C11.5786 4.92172 12 5.93913 12 7V21C12 20.2044 11.6839 19.4413 11.1213 18.8787C10.5587 18.3161 9.79565 18 9 18H2V3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22 3H16C14.9391 3 13.9217 3.42143 13.1716 4.17157C12.4214 4.92172 12 5.93913 12 7V21C12 20.2044 12.3161 19.4413 12.8787 18.8787C13.4413 18.3161 14.2044 18 15 18H22V3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Smart Budgeting</h3>
+                    <p class="feature-desc">Connects to your finances and instantly tells you if a purchase fits your budget. See the real impact on your monthly cash flow before you buy.</p>
+                    <div class="feature-visual">
+                        <div class="budget-bar">
+                            <div class="budget-fill" style="width: 62%">
+                                <span>$1,240 remaining</span>
+                            </div>
+                        </div>
+                        <div class="budget-labels">
+                            <span>Monthly Budget</span>
+                            <span>$2,000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Comparison Analysis -->
+                <div class="feature-card" data-feature="compare">
+                    <div class="feature-icon feature-icon-cyan">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M18 20V10M12 20V4M6 20V14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Comparison Analysis</h3>
+                    <p class="feature-desc">AI scans thousands of alternatives and surfaces the best options by price, quality, and reviews. Side-by-side comparisons made effortless.</p>
+                    <div class="feature-visual">
+                        <div class="compare-items">
+                            <div class="compare-item">
+                                <div class="compare-name">Trek Domane</div>
+                                <div class="compare-price">$2,499</div>
+                                <div class="compare-stars">★★★★★</div>
+                            </div>
+                            <div class="compare-vs">VS</div>
+                            <div class="compare-item compare-item-winner">
+                                <div class="compare-badge">Best Value</div>
+                                <div class="compare-name">Canyon Endurace</div>
+                                <div class="compare-price">$1,899</div>
+                                <div class="compare-stars">★★★★★</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 3: Buyer's Remorse -->
+                <div class="feature-card" data-feature="remorse">
+                    <div class="feature-icon feature-icon-pink">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 18.5C12 18.5 3 14 3 7.5C3 6.04131 3.57946 4.64236 4.61091 3.61091C5.64236 2.57946 7.04131 2 8.5 2C10.07 2 11.36 2.69 12 3.78C12.64 2.69 13.93 2 15.5 2C16.9587 2 18.3576 2.57946 19.3891 3.61091C20.4205 4.64236 21 6.04131 21 7.5C21 14 12 18.5 12 18.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 18.5V22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Remorse Predictor</h3>
+                    <p class="feature-desc">Talk through your purchase with our AI voice assistant. It analyzes your tone, hesitations, and reasoning to predict if you'll regret it.</p>
+                    <div class="feature-visual">
+                        <div class="voice-wave">
+                            <div class="wave-bar" style="height: 20%"></div>
+                            <div class="wave-bar" style="height: 45%"></div>
+                            <div class="wave-bar" style="height: 70%"></div>
+                            <div class="wave-bar" style="height: 90%"></div>
+                            <div class="wave-bar" style="height: 60%"></div>
+                            <div class="wave-bar" style="height: 80%"></div>
+                            <div class="wave-bar" style="height: 40%"></div>
+                            <div class="wave-bar" style="height: 95%"></div>
+                            <div class="wave-bar" style="height: 55%"></div>
+                            <div class="wave-bar" style="height: 30%"></div>
+                            <div class="wave-bar" style="height: 65%"></div>
+                            <div class="wave-bar" style="height: 50%"></div>
+                        </div>
+                        <div class="voice-label">
+                            <span class="voice-dot"></span>
+                            Analyzing purchase confidence...
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 4: Discounts -->
+                <div class="feature-card" data-feature="discount">
+                    <div class="feature-icon feature-icon-green">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M7 7H7.01M17 17H17.01M22 12L17 2H7L2 12L7 22H17L22 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 8L8 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Discount Hunter</h3>
+                    <p class="feature-desc">Automatically finds active coupons, cashback offers, price-drop alerts, and negotiation tips so you never pay full price again.</p>
+                    <div class="feature-visual">
+                        <div class="discount-stack">
+                            <div class="discount-coupon coupon-1">
+                                <span class="coupon-code">SAVE15</span>
+                                <span class="coupon-value">-15%</span>
+                            </div>
+                            <div class="discount-coupon coupon-2">
+                                <span class="coupon-code">CASHBACK</span>
+                                <span class="coupon-value">+5% back</span>
+                            </div>
+                            <div class="discount-coupon coupon-3">
+                                <span class="coupon-code">PRICEDROP</span>
+                                <span class="coupon-value">-$89</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">How It Works</div>
+                <h2 class="section-title">Three Steps to<br><span class="gradient-text">Smarter Spending</span></h2>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Share What You Want</h3>
+                        <p>Paste a product link, snap a photo, or just describe what you're eyeing. YASSbuy's AI instantly understands the product, price, and category.</p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="step-mockup">
+                            <div class="mockup-url">
+                                <span class="mockup-dot"></span>
+                                rei.com/product/snowboard-burton...
+                            </div>
+                            <div class="mockup-product">
+                                <div class="mockup-img"></div>
+                                <div class="mockup-info">
+                                    <div class="mockup-name">Burton Custom X</div>
+                                    <div class="mockup-price">$699.95</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Get AI Analysis</h3>
+                        <p>In seconds, YASSbuy analyzes your budget fit, finds better alternatives, predicts satisfaction, and hunts for every possible discount.</p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="analysis-cards">
+                            <div class="mini-card mini-budget">
+                                <span class="mini-icon">💰</span> Budget: OK
+                            </div>
+                            <div class="mini-card mini-compare">
+                                <span class="mini-icon">📊</span> 5 alternatives
+                            </div>
+                            <div class="mini-card mini-remorse">
+                                <span class="mini-icon">💚</span> Low remorse risk
+                            </div>
+                            <div class="mini-card mini-discount">
+                                <span class="mini-icon">🏷️</span> $87 savings found
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Buy with Confidence</h3>
+                        <p>Make your purchase knowing you got the best deal, it fits your budget, and you're going to love it. No second-guessing, no regrets.</p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="confidence-meter">
+                            <div class="meter-ring">
+                                <svg viewBox="0 0 120 120">
+                                    <circle cx="60" cy="60" r="52" stroke="#E2E8F0" stroke-width="8" fill="none"/>
+                                    <circle cx="60" cy="60" r="52" stroke="url(#meterGrad)" stroke-width="8" fill="none" stroke-dasharray="290" stroke-dashoffset="30" stroke-linecap="round" transform="rotate(-90, 60, 60)" class="meter-progress"/>
+                                    <defs>
+                                        <linearGradient id="meterGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" style="stop-color:#7C3AED"/>
+                                            <stop offset="100%" style="stop-color:#06B6D4"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <div class="meter-value">
+                                    <span class="meter-num">96</span>
+                                    <span class="meter-pct">%</span>
+                                </div>
+                            </div>
+                            <div class="meter-label">Purchase Confidence</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Case Showcase -->
+    <section class="showcase">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Use Cases</div>
+                <h2 class="section-title">Perfect For<br><span class="gradient-text">Big Decisions</span></h2>
+            </div>
+            <div class="showcase-grid">
+                <div class="showcase-card">
+                    <div class="showcase-emoji">🏂</div>
+                    <h3>Outdoor Gear</h3>
+                    <p>Snowboards, skis, bikes, kayaks — get the best bang for your buck on premium equipment.</p>
+                </div>
+                <div class="showcase-card">
+                    <div class="showcase-emoji">💻</div>
+                    <h3>Electronics</h3>
+                    <p>Laptops, cameras, TVs — cut through the specs and find your perfect match.</p>
+                </div>
+                <div class="showcase-card">
+                    <div class="showcase-emoji">🚴</div>
+                    <h3>Fitness & Sports</h3>
+                    <p>Road bikes, home gyms, running shoes — invest in the right gear the first time.</p>
+                </div>
+                <div class="showcase-card">
+                    <div class="showcase-emoji">🏠</div>
+                    <h3>Home & Furniture</h3>
+                    <p>Mattresses, appliances, furniture — big ticket items you'll live with for years.</p>
+                </div>
+                <div class="showcase-card">
+                    <div class="showcase-emoji">🎸</div>
+                    <h3>Musical Instruments</h3>
+                    <p>Guitars, keyboards, amps — find the right sound without overpaying.</p>
+                </div>
+                <div class="showcase-card">
+                    <div class="showcase-emoji">📱</div>
+                    <h3>Phones & Tablets</h3>
+                    <p>The upgrade cycle is expensive. Make sure your next device is worth it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Pricing</div>
+                <h2 class="section-title">Start Free.<br><span class="gradient-text">Save Big.</span></h2>
+                <p class="section-subtitle">Try YASSbuy free and upgrade when you're ready to unlock the full power of AI purchasing.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-name">Free</div>
+                    <div class="pricing-price">$0<span>/mo</span></div>
+                    <div class="pricing-desc">Perfect for trying it out</div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            3 purchase analyses / month
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Basic price comparison
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Budget snapshot
+                        </li>
+                    </ul>
+                    <a href="#waitlist" class="btn btn-outline btn-block">Get Started Free</a>
+                </div>
+                <div class="pricing-card pricing-card-featured">
+                    <div class="pricing-popular">Most Popular</div>
+                    <div class="pricing-name">Pro</div>
+                    <div class="pricing-price">$9<span>/mo</span></div>
+                    <div class="pricing-desc">For serious shoppers</div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Unlimited analyses
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            AI voice remorse analysis
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Automatic discount hunting
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Full budget integration
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Price drop alerts
+                        </li>
+                    </ul>
+                    <a href="#waitlist" class="btn btn-primary btn-block">Join Waitlist</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-name">Family</div>
+                    <div class="pricing-price">$19<span>/mo</span></div>
+                    <div class="pricing-desc">For the whole household</div>
+                    <ul class="pricing-features">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Everything in Pro
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Up to 5 family members
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Shared family budget view
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8L6.5 11.5L13 5" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            Priority support
+                        </li>
+                    </ul>
+                    <a href="#waitlist" class="btn btn-outline btn-block">Join Waitlist</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial / Quote -->
+    <section class="testimonial">
+        <div class="container">
+            <div class="testimonial-card">
+                <div class="testimonial-quote">"I was about to drop $2,400 on a road bike. YASSbuy found me the same frame, better components, and a 20% discount — saved me $680 and zero regrets."</div>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">MK</div>
+                    <div>
+                        <div class="testimonial-name">Mike K.</div>
+                        <div class="testimonial-role">Beta Tester, Cycling Enthusiast</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waitlist CTA -->
+    <section class="waitlist" id="waitlist">
+        <div class="container">
+            <div class="waitlist-card">
+                <div class="waitlist-bg"></div>
+                <div class="waitlist-content">
+                    <h2 class="waitlist-title">Ready to Shop<br><span class="gradient-text">Smarter?</span></h2>
+                    <p class="waitlist-subtitle">Join the waitlist and be the first to experience AI-powered purchasing. Early members get 3 months of Pro free.</p>
+                    <form class="waitlist-form" id="waitlistForm">
+                        <div class="form-row">
+                            <input type="email" placeholder="Enter your email" class="form-input" id="emailInput" required>
+                            <button type="submit" class="btn btn-lg btn-primary form-btn">
+                                Join Waitlist
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="form-success" id="formSuccess">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M5 10L8.5 13.5L15 7" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            You're on the list! Check your email for confirmation.
+                        </div>
+                    </form>
+                    <p class="waitlist-note">No spam, ever. Unsubscribe anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="assets/logo-white.svg" alt="YASSbuy" height="36">
+                    <p>AI-powered purchasing intelligence.<br>Shop smarter, not harder.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="#how-it-works">How It Works</a>
+                        <a href="#waitlist">Join Waitlist</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <a href="#">About</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Contact</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 YASSbuy. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22 4.01C21 4.5 20.02 4.69 19 5C17.89 3.86 16.22 3.5 14.72 4.04C13.22 4.59 12.22 5.96 12.22 7.5V8.5C8.73 8.6 5.53 6.96 3.5 4.28C3.5 4.28 -0.5 12.78 8 16.78C5.94 18.21 3.47 18.93 1 18.78C4.56 20.82 8.71 21.47 12.46 20.45C16.21 19.43 19.27 16.83 20.87 13.32C22.47 9.81 22.47 5.82 22.47 5.3C22.47 5.08 22 4.01 22 4.01Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="9" width="4" height="12" stroke="currentColor" stroke-width="1.5"/><circle cx="4" cy="4" r="2" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none">
+  <defs>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A78BFA"/>
+      <stop offset="50%" style="stop-color:#F472B6"/>
+      <stop offset="100%" style="stop-color:#22D3EE"/>
+    </linearGradient>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A78BFA"/>
+      <stop offset="100%" style="stop-color:#22D3EE"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(8, 8)">
+    <rect x="4" y="22" width="56" height="40" rx="6" fill="url(#iconGrad)" opacity="0.9"/>
+    <path d="M20 22 V16 C20 8 24 4 32 4 C40 4 44 8 44 16 V22" stroke="url(#brandGrad)" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M32 32 L34 38 L40 40 L34 42 L32 48 L30 42 L24 40 L30 38 Z" fill="white" opacity="0.95"/>
+    <path d="M46 28 L47 31 L50 32 L47 33 L46 36 L45 33 L42 32 L45 31 Z" fill="white" opacity="0.7"/>
+    <path d="M20 34 L20.8 36 L23 36.5 L20.8 37 L20 39 L19.2 37 L17 36.5 L19.2 36 Z" fill="white" opacity="0.5"/>
+  </g>
+  <text x="82" y="54" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="46" font-weight="800" letter-spacing="-1">
+    <tspan fill="url(#brandGrad)">YASS</tspan><tspan fill="#FFFFFF">buy</tspan>
+  </text>
+</svg>
